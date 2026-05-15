@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary-light hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-accent {
+    @apply bg-accent text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-accent-light hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply border-2 border-white text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-white hover:text-primary;
+  }
+  .btn-outline-dark {
+    @apply border-2 border-primary text-primary px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary hover:text-white;
+  }
+  .section-padding {
+    @apply py-20 md:py-28 px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+  }
+  .image-hover {
+    @apply overflow-hidden;
+  }
+  .image-hover img {
+    @apply transition-transform duration-700 hover:scale-110;
+  }
+  .underline-accent {
+    @apply relative inline-block;
+  }
+  .underline-accent::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-16 h-0.5 bg-accent;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  @apply w-3 h-3 bg-gray-300 opacity-100 transition-all duration-300;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-accent w-8 rounded-full;
+}
+
+/* Scrollbar custom */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cream;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-light;
+}
