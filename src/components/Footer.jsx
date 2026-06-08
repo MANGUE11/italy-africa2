@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, ArrowRight, Send } from 'lucide-react'
+import { Phone, Mail, MapPin, ArrowRight, Send, Facebook, Instagram, Linkedin } from 'lucide-react'
 import { useState } from 'react'
+import logoWhite from '../assets/images/Italia-logo-blanc.png'
 
 const Footer = () => {
   const [email, setEmail] = useState('')
@@ -70,20 +71,8 @@ const Footer = () => {
         <div className='max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12'>
           {/* Brand */}
           <div>
-            <Link to='/' className='flex items-center gap-3 mb-6'>
-              <div className='w-10 h-10 bg-accent rounded-lg flex items-center justify-center'>
-                <span className='text-white font-serif font-bold text-lg'>
-                  IA
-                </span>
-              </div>
-              <div>
-                <span className='font-serif font-bold text-lg'>
-                  ITALYAFRICA
-                </span>
-                <span className='block text-[9px] text-white/50 tracking-widest uppercase'>
-                  International Legal Consulting
-                </span>
-              </div>
+            <Link to='/' className='inline-flex mb-6'>
+              <img src={logoWhite} alt="ItalyAfrica" className="h-16 w-auto object-contain" />
             </Link>
             <div className='space-y-2 text-sm text-white/70'>
               {locations.map((loc, i) => (
@@ -94,8 +83,8 @@ const Footer = () => {
               ))}
             </div>
             <div className='mt-6 space-y-2 text-sm text-white/70'>
-              <div>info@italyafricavrl.com</div>
-              <div>mkante@italyafricavrl.com</div>
+              <div>info@italyafrica.com</div>
+              <div>mkante@italyafrica.com</div>
             </div>
             <div className='mt-4 space-y-1 text-sm text-white/70'>
               <div>Numero Fixe : 05 22 92 82 15</div>
@@ -160,7 +149,7 @@ const Footer = () => {
               <div className='flex items-start gap-3'>
                 <Mail size={16} className='text-accent mt-1 flex-shrink-0' />
                 <div className='text-sm text-white/70'>
-                  <div>info@italyafricavrl.com</div>
+                  <div>info@italyafrica.com</div>
                 </div>
               </div>
               <div className='flex items-start gap-3'>
@@ -178,18 +167,16 @@ const Footer = () => {
           <p className='text-white/50 text-sm'>
             &copy; 2026 ITALYAFRICA. TOUS DROITS RESERVES
           </p>
-          <div className='flex items-center gap-4'>
-            {['whatsapp', 'linkedin', 'facebook'].map((social) => (
-              <a
-                key={social}
-                href='#'
-                className='w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors'
-              >
-                <span className='text-xs font-bold uppercase'>
-                  {social.charAt(0)}
-                </span>
-              </a>
-            ))}
+          <div className='flex items-center gap-3'>
+            <a href='#' className='w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors'>
+              <Facebook size={16} />
+            </a>
+            <a href='#' className='w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors'>
+              <Linkedin size={16} />
+            </a>
+            <a href='#' className='w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors'>
+              <Instagram size={16} />
+            </a>
           </div>
         </div>
       </div>

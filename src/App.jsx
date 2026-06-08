@@ -8,6 +8,7 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Team from './pages/Team'
+import Commercial from './pages/Commercial'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/commercial" element={<Commercial />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

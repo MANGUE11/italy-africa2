@@ -21,7 +21,7 @@ const ContactSection = () => {
 
   const contactInfo = [
     { icon: Phone, label: 'Telephone', value: '+212 (0)5 22 92 82 15' },
-    { icon: Mail, label: 'Email', value: 'info@italyafricavrl.com' },
+    { icon: Mail, label: 'Email', value: 'info@italyafrica.com' },
     { icon: MapPin, label: 'Adresse', value: 'Casablanca, Maroc' },
     { icon: Clock, label: 'Horaires', value: 'Lun-Ven: 9h - 18h' },
   ]
@@ -110,9 +110,9 @@ const ContactSection = () => {
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade" title="Map" />
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {contactInfo.map((info, index) => (
-                <div key={index} className="bg-white rounded-2xl p-5 flex items-start gap-3 shadow-sm">
+                <div key={index} className="bg-white rounded-2xl p-5 flex items-center gap-4 shadow-sm">
                   <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <info.icon className="text-accent" size={18} />
                   </div>

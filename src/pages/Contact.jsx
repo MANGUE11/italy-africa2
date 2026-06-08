@@ -40,7 +40,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Phone, label: 'Telephone', value: '+212 (0)5 22 92 82 15' },
-    { icon: Mail, label: 'Email', value: 'info@italyafricavrl.com' },
+    { icon: Mail, label: 'Email', value: 'info@italyafrica.com' },
     { icon: MapPin, label: 'Adresse', value: 'Casablanca, Maroc' },
     { icon: Clock, label: 'Horaires', value: 'Lun-Ven: 9h - 18h' },
   ]
@@ -99,9 +99,9 @@ const Contact = () => {
               <div className="rounded-3xl overflow-hidden shadow-lg h-80">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.56000612275!2d-7.6693949!3d33.5731104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca%2C%20Maroc!5e0!3m2!1sfr!2s!4v1700000000000!5m2!1sfr!2s" width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Map" />
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="bg-cream rounded-2xl p-5 flex items-start gap-3">
+                  <div key={index} className="bg-cream rounded-2xl p-5 flex items-center gap-4">
                     <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0"><info.icon className="text-accent" size={18} /></div>
                     <div>
                       <div className="text-xs text-gray-500">{info.label}</div>

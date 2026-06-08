@@ -14,10 +14,10 @@ const Reference = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-2">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">
               UN VÉRITABLE POINT DE
             </h2>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-8 underline-accent">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-8 underline-accent">
               RÉFÉRENCE
             </h2>
 

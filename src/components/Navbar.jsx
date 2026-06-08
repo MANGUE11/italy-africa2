@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown, ArrowUpRight } from 'lucide-react'
+import logoColor from '../assets/images/LOGO-ITALYAFRICA.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,9 +23,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Accueil', path: '/' },
-    { name: 'Qui sommes nous', path: '/about' },
+    { name: 'A propos', path: '/about' },
     { name: 'Nos axes d\'intervention', path: '/services' },
-    { name: 'Nos partenaires', path: '/about#partenaires' },
+    { name: 'Section Commerciale', path: '/commercial' },
     { name: 'Contact', path: '/contact' },
   ]
 
@@ -37,14 +38,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-serif font-bold text-lg">IA</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif font-bold text-xl text-primary tracking-tight">ITALYAFRICA</span>
-              <span className="text-[10px] text-gray-500 -mt-1 tracking-widest uppercase">International Legal Consulting</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={logoColor} alt="ItalyAfrica" className="h-10 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
